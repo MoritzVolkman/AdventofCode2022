@@ -13,10 +13,8 @@ def part1():
             i += 1
             if item in compartment1 and item in compartment2:
                 priority += get_priority(item)
-                print(f"Item: {item} Priority: {get_priority(item)}")
                 break
-        print(f"Rucksack Compartment1: {compartment1}, Compartment2: {compartment2}")
-        print(f"Sum of Priority: {priority}")
+    print(f"Sum of Priority Part 1: {priority}")
 
 
 def part2():
@@ -38,13 +36,12 @@ def part2():
             i = 0
             for item in rucksack:
                 if item in rucksack1 and item in rucksack2 and item in rucksack3:
-                    print(f"item: {item}")
                     priority += get_priority(item)
                     break
             rucksack1 = ""
             rucksack2 = ""
             rucksack3 = ""
-    print(priority)
+    print(f"Sum of Priority Part 2: {priority}")
 
 
 def get_priority(char):
